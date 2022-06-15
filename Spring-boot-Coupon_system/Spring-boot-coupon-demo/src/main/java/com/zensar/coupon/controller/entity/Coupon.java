@@ -9,16 +9,19 @@ public class Coupon {
 	private int couponId;
 	private String couponCode;
 	private int couponCost;
+	private String couponExDate;
 
 	private Coupon() {
 		super();
 	}
 
-	private Coupon(int couponId, String couponCode, int couponCost) {
+	private Coupon(int couponId, String couponCode, int couponCost,String couponExDate) {
 		super();
 		this.couponId = couponId;
 		this.couponCode = couponCode;
 		this.couponCost = couponCost;
+		this.couponExDate = couponExDate;
+		
 	}
 
 	public int getCouponId() {
@@ -44,9 +47,16 @@ public class Coupon {
 	public void setCouponCost(int couponCost) {
 		this.couponCost = couponCost;
 	}
+	public String getCouponExDate() {
+		return couponExDate;
+	}
+
+	public void setCouponExDate(String couponExDate) {
+		this.couponExDate = couponExDate;
+	}
 
 	@Override
 	public String toString() {
-		return "Coupon [couponId=" + couponId + ", couponCode=" + couponCode + ", couponCost=" + couponCost + "]";
+		return "Coupon [couponId=" + couponId + ", couponCode=" + couponCode + ", couponCost=" + couponCost + ",couponExDate=" + couponExDate+"]";
 	}
 }
