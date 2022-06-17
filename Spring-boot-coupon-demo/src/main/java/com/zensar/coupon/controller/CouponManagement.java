@@ -3,6 +3,7 @@ package com.zensar.coupon.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -42,9 +43,9 @@ public class CouponManagement {
 	@GetMapping(value = "/coupons/")
 	// public List<CouponDto> getCoupons() {
 	//public ResponseEntity<List<CouponDto>> getCoupons() {
-	public ResponseEntity<List<CouponDto>> getCoupons(@RequestParam(value="pageNumber",required=false,defaultValue="0")int pageNumber,@RequestParam(value="pageSize",required = false,defaultValue = "3")int pageSize) {
+	public ResponseEntity<List<CouponDto>> getCoupons(@RequestParam(value="pageNumber",required=false,defaultValue="0")int pageNumber,@RequestParam(value="pageSize",required = false,defaultValue = "3")int pageSize,String sortBy,Direction dir) {
 		// return couponService.getCoupons();
-		return new ResponseEntity<List<CouponDto>>(couponService.getCoupons(pageNumber,pageSize), HttpStatus.OK);
+		return new ResponseEntity<List<CouponDto>>(couponService.getCoupons(pageNumber,pageSize,sortBy,dir), HttpStatus.OK);
 	}
 
 //	@PostMapping(value = "/coupons",consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
