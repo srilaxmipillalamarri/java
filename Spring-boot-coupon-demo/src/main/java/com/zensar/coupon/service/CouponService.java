@@ -16,9 +16,9 @@ public interface CouponService {
 
 	public CouponDto insertCoupon(CouponDto couponDto);
 
-	public void updateCoupon(int CouponId, CouponDto couponDto);
+	public void updateCoupon(int couponId, CouponDto couponDto);
 
-	public void deleteCoupon(int CouponId);
+	public void deleteCoupon(int couponId);
 
 	public List<CouponDto> getByCouponCode(String couponCode);
 

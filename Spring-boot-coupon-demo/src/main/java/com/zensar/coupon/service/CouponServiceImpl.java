@@ -26,6 +26,7 @@ public class CouponServiceImpl implements CouponService {
 	}
 
 	@Override
+	//public Coupon getCoupon(int couponId)
 	public CouponDto getCoupon(int couponId) {
 		Coupon getCoupon = couponRepository.findById(couponId).get();
 		return modelMapper.map(getCoupon,CouponDto.class);
@@ -35,7 +36,6 @@ public class CouponServiceImpl implements CouponService {
 	@Override
 	//public List<CouponDto> getCoupons() {
 	//public List<CouponDto> getCoupons(int pageNumber,int pageSize) {
-	public List<CouponDto> getCoupons(int pageNumber,int pageSize,String sortBy,Direction dir){
 		//List<Coupon> listOfCoupons = couponRepository.findAll();
 		//Page<Coupon> findAll = couponRepository.findAll(PageRequest.of(1, 5));
 		//Page<Coupon> findAll = couponRepository.findAll(PageRequest.of(pageNumber,pageSize));
@@ -43,6 +43,7 @@ public class CouponServiceImpl implements CouponService {
 		//Page<Coupon> findAll = couponRepository.findAll(PageRequest.of(pageNumber,pageSize,Sort.by(Direction.ASC,"couponCode")));
 		//Page<Coupon> findAll = couponRepository.findAll(PageRequest.of(pageNumber,pageSize,Direction.DESC,"couponCode"));
 		//Page<Coupon> findAll = couponRepository.findAll(PageRequest.of(pageNumber,pageSize,Direction.ASC,"couponCode"));
+	    public List<CouponDto> getCoupons(int pageNumber,int pageSize,String sortBy,Direction dir){
 		Page<Coupon> findAll = couponRepository.findAll(PageRequest.of(pageNumber,pageSize,dir,sortBy));
 		List<Coupon> content = findAll.getContent();
 		List<CouponDto> listOfCouponDto = new ArrayList<CouponDto>();
