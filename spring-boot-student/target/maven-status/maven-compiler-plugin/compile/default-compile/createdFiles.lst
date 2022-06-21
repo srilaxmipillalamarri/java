@@ -1,0 +1,8 @@
+com\zensar\controller\HomeController.class
+com\zensar\RestActuatorController.class
+com\zensar\controller\StudentController.class
+com\zensar\entity\Student.class
+com\zensar\controller\repository\StudentRepository.class
+com\zensar\controller\service\StudentServiceImpl.class
+com\zensar\controller\service\StudentService.class
+com\zensar\dto\StudentDto.class
