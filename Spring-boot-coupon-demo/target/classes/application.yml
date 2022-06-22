@@ -6,3 +6,25 @@ spring:
  jpa:
   hibernate:
    ddl-auto: update
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+        #exclude:
+        #- health
+      base-path: /myactuator      
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    build:
+      enabled: true
+    git:
+      enabled: true
+    env:
+      enabled: true
+
+   
