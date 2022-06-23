@@ -98,7 +98,7 @@ public class ProductController {
 	 * product1.setProductId(product.getProductId());
 	 * product1.setProductName(product.getProductName());
 	 * product1.setProductCost(product.getProductCost());
-	 * product1.setProductExDate(product.getProductExDate());
+	 * product1.setProductExp(product.getProductExp());
 	 * 
 	 * products.add(product1);
 	 */
@@ -137,9 +137,9 @@ public class ProductController {
 	public ResponseEntity<List<ProductDto>> getByProductNameOrProductCost(@PathVariable("productName")String productName,@PathVariable("productCost")int productCost){
 		return new ResponseEntity<List<ProductDto>>(productService.getByProductNameOrProductCost(productName, productCost),HttpStatus.OK);
 }
-	@GetMapping(value="/products/{productName}/{productExDate}")
-	public ResponseEntity<List<ProductDto>> getByProductNameAndProductExDate(@PathVariable("productName")String productName,@PathVariable("productExDate")String productExDate){
-		return new ResponseEntity<List<ProductDto>>(productService.getByProductNameAndProductExDate(productName, productExDate),HttpStatus.OK);
+	@GetMapping(value="/products/{productName}/{productExp}")
+	public ResponseEntity<List<ProductDto>> getByProductNameAndProductExp(@PathVariable("productName")String productName,@PathVariable("productExp")String productExp){
+		return new ResponseEntity<List<ProductDto>>(productService.getByProductNameAndProductExp(productName, productExp),HttpStatus.OK);
 		
 	}
 	@GetMapping(value="/products/order/{productName}")
