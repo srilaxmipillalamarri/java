@@ -15,17 +15,17 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
 	List<Product> findByProductNameOrProductCost(String productName, int cost);
 
-	List<Product> findByProductNameAndProductExDate(String productName, String productExDate);
+	List<Product> findByProductNameAndProductExp(String productName, String productExp);
 
 	List<Product> findByProductNameOrderByProductCost(String productName);
 
 //List<Product> test( String productName);
 //@Query(value = "from Product p where p.productName=:name")
 	@Query(value = "select * from Product p where p.product_name=:name", nativeQuery = true)
-	List<Product> ByName(@Param("name") String productName);
+	List<Product> test(@Param("name") String productName);
 
 //List<Product> test1( String productName,String productExDate);
-//@Query(value = "from Product p where p.productName=:name and p.productExDate=:date")
-	@Query(value = "select * from Product p where p.product_name=:name and p.product_ex_date=:ex_date", nativeQuery = true)
-	List<Product> ByNameAndByExDate(@Param("name") String productName, @Param("ex_date") String productExpDate);
+//@Query(value = "from Product p where p.productName=:name and p.productExp=:exp")
+	@Query(value = "select * from Product p where p.product_name=:name and p.product_exp=:exp", nativeQuery = true)
+	List<Product> test1(@Param("name") String productName, @Param("exp") String productExp);
 }
