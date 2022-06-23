@@ -9,16 +9,16 @@ public class Product {
 	private int productId;
 	private String productName;
 	private int productCost;
-	private String productExDate;
+	private String productExp;
 	public Product() {
 		super();
 	}
-	public Product(int productId, String productName, int productCost, String productExDate) {
+	public Product(int productId, String productName, int productCost, String productExp) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.productCost = productCost;
-		this.productExDate = productExDate;
+		this.productExp = productExp;
 	}
 	public int getProductId() {
 		return productId;
@@ -38,16 +38,16 @@ public class Product {
 	public void setProductCost(int productCost) {
 		this.productCost = productCost;
 	}
-	public String getProductExDate() {
-		return productExDate;
+	public String getProductExp() {
+		return productExp;
 	}
-	public void setProductExDate(String productExDate) {
-		this.productExDate = productExDate;
+	public void setProductExp(String productExp) {
+		this.productExp = productExp;
 	}
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", productCost=" + productCost
-				+ ", productExDate=" + productExDate + "]";
+				+ ", productExp=" + productExp + "]";
 	}
 
 }
