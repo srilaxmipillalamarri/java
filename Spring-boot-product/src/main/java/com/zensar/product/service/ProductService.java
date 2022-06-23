@@ -27,7 +27,7 @@ public interface ProductService {
 	
 	public List<ProductDto> getByProductName(String productName);
 	
-	public List<ProductDto> getByProductNameAndProductExDate(String productName,String productExDate);
+	public List<ProductDto> getByProductNameAndProductExp(String productName,String productExp);
 	
 	public List<ProductDto> getByProductNameOrProductCost(String productName,int productCost);
 	
