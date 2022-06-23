@@ -77,7 +77,7 @@ public class ProductServiceImpl implements ProductService {
 		 * product.setProductId(productDto.getProductId());
 		 * product.setProductName(productDto.getProductName());
 		 * product.setProductCost(productDto.getProductCost());
-		 * product.setProductExDate(productDto.getProductExDate());
+		 * product.setProductExp(productDto.getProductExp());
 		 */
 
 		// Product product=mapToEntity(productDto);
@@ -96,7 +96,7 @@ public class ProductServiceImpl implements ProductService {
 	 * product1.setProductId(product.getProductId());
 	 * product1.setProductName(product.getProductName());
 	 * product1.setProductCost(product.getProductCost());
-	 * product1.setProductExDate(product.getProductExDate());
+	 * product1.setProductExp(product.getProductExp());
 	 * products.add(product1);
 	 */
 
@@ -106,7 +106,7 @@ public class ProductServiceImpl implements ProductService {
 		 * product.setProductId(productDto.getProductId());
 		 * product.setProductName(productDto.getProductName());
 		 * product.setProductCost(productDto.getProductCost());
-		 * product.setProductExDate(productDto.getProductExDate());
+		 * product.setProductExp(productDto.getProductExp());
 		 */
 
 		// Product product=mapToEntity(productDto);
@@ -150,8 +150,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<ProductDto> getByProductNameAndProductExDate(String productName, String productExDate) {
-		List<Product> findByProductName = productRepository.test1(productName, productExDate);
+	public List<ProductDto> getByProductNameAndProductExp(String productName, String productExp) {
+		List<Product> findByProductName = productRepository.test1(productName, productExp);
 		List<ProductDto> productDtos = new ArrayList<ProductDto>();
 		for (Product product : findByProductName)
 			productDtos.add(modelMapper.map(product, ProductDto.class));
@@ -173,12 +173,12 @@ public class ProductServiceImpl implements ProductService {
 	 * Product(); product.setProductId(productDto.getProductId());
 	 * product.setProductName(productDto.getProductName());
 	 * product.setProductCost(productDto.getProductCost());
-	 * product.setProductExDate(productDto.getProductExDate()); return product; }
+	 * product.setProductExp(productDto.getProductExp()); return product; }
 	 * public ProductDto mapToDto(Product product) { ProductDto dto=new
 	 * ProductDto(); dto.setProductId(product.getProductId());
 	 * dto.setProductName(product.getProductName());
 	 * dto.setProductCost(product.getProductCost());
-	 * dto.setProductExDate(product.getProductExDate()); return dto; }
+	 * dto.setProductExp(product.getProductExp()); return dto; }
 	 */
 
 
