@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+<!-- <bean  id="product" class="com.zensar.beans.Product">
+<property name="pId" value="101"></property>
+<property name="pName" value="hp"></property>
+<property name="pCost" value="1000"></property>
+</bean> -->
+
+<!-- <bean  id="p2" class="com.zensar.beans.Product">
+<constructor-arg index="2"><value type="int">10000</value></constructor-arg>
+<constructor-arg index="1"><value>dell</value></constructor-arg>
+<constructor-arg index="0"><value type="int">10</value></constructor-arg>
+</bean>
+ -->
+
+<!-- <bean  id="s1" class="com.zensar.beans.Student" autowire="byName">
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="Address" ref="Address"></property>
+</bean> -->
+
+<!-- <bean  id="s1" class="com.zensar.beans.Student" autowire="byType">
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="Address" ref="Address"></property>
+</bean> -->
+
+<!-- <bean  id="addr1" class="com.zensar.beans.Address" autowire-candidate="false">
+<property name="state" value="ap"></property>
+<property name="city" value="khammam"></property>
+<property name="pincode" value="507208"></property>
+</bean>
+ -->
+ <!-- <bean  id="s1" class="com.zensar.beans.Student" autowire="constructor">
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="Address" ref="Address"></property>
+</bean> 
+ -->
+ 
+<context:annotation-config></context:annotation-config>
+
+
+<!-- / /this is for list<address> address -->
+ <!-- <bean  id="s1" class="com.zensar.beans.Student">
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="address">
+				<list>
+				<ref bean="address1"/>
+				<ref bean="address2"/>
+				</list>
+				</property>
+</bean> -->
+
+<!-- this is for setmethod -->
+<!-- <bean  id="s1" class="com.zensar.beans.Student">
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="address">
+				<set>
+				<ref bean="address1"/>
+				<ref bean="address2"/>
+				</set>
+				</property>
+</bean> -->
+
+<!-- <bean  id="s1" class="com.zensar.beans.Student">
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="address">
+				<map>
+				<entry key="1" value-ref="address1"></entry>
+				<entry key="2" value-ref="address2"></entry>
+				</map>
+				</property>
+				</bean> -->
+				
+<!-- <bean  id="s1" class="com.zensar.beans.Student" abstract="true" >
+<property name="StdId" value="105"></property>
+<property name="Stdname" value="srilaxmi"></property>
+<property name="StdAge" value="23"></property>
+<property name="address">
+				<map>
+				<entry key-ref="address1" value="1"></entry>
+				<entry key-ref="address2" value="2"></entry>
+				</map>
+				</property>
+				<property name="properties">
+				<props>
+				<prop key="name">srilaxmi</prop>
+				<prop key="age">23</prop>
+				</props>
+				</property>
+				
+				</bean>
+				
+				
+				<bean id="s2" parent="s1">
+				<property name="Stdname" value="srilaxmipillala"></property>
+				</bean> -->
+				
+				<!-- <bean  id="s1" class="com.zensar.beans.Student" >
+<property name="stdId" value="105"></property>
+<property name="stdname" value="srilaxmi"></property>
+<property name="stdAge" value="23"></property>
+<property name="address">
+				
+           <bean  class="com.zensar.beans.Address">
+<property name="state" value="ap"></property>
+<property name="city" value="khammam"></property>
+<property name="pincode" value="507208"></property></bean>
+</property>
+</bean>
+ -->
+
+
+
+<!-- / /this is for list<address> address -->
+<!-- <bean id="s1" class="com.zensar.beans.Student"  >
+<property name="stdId" value="105"></property>
+<property name="stdname" value="sri"></property>
+<property name="stdAge" value="23"></property>
+<property name="address" ref="address1"></property>
+</bean>
+
+
+<bean id="address1" class="com.zensar.beans.Address">
+<property name="city" value="guntur"></property>
+<property name="state" value="andhra prades"></property>
+<property name="pincode" value="522438"></property>
+</bean> -->
+
+
+<!-- <context:property-placeholder location="data.properties" />
+<context:component-scan base-package="com.zensar.beans"></context:component-scan>
+
+<bean id="student" class="com.zensar.beans.Student"  >
+<property name="stdId" value="${id}"></property>
+<property name="stdname" value="${name}"></property>
+<property name="stdAge" value="${age}"></property>
+</bean>
+
+ -->
+<bean id="s1" class="com.zensar.beans.Student">
+		<property name="studentId" value="1"></property>
+		<property name="studentName" value="Ram"></property>
+		<property name="studentAge" value="20"></property>
+	</bean>
+	
+	
+	<bean class="com.zensar.beans.MyBeanPostProcessor"></bean>
+
+				
+<!-- bean  id="address1" class="com.zensar.beans.Address">
+<property name="state" value="ap"></property>
+<property name="city" value="khammam"></property>
+<property name="pincode" value="507208"></property>
+</bean>
+<bean  id="address2" class="com.zensar.beans.Address">
+<property name="state" value="ts"></property>
+<property name="city" value="khammam"></property>
+<property name="pincode" value="507208"></property>
+</bean> -->
+
+
+
+</beans>
