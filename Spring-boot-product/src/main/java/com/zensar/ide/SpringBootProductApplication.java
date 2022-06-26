@@ -8,7 +8,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@SpringBootApplication
 @ComponentScan(basePackages = {"test","com.zensar"})
 @OpenAPIDefinition
 public class SpringBootProductApplication {
