@@ -3,7 +3,6 @@ package com.zensar.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,10 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import com.zensar.entity.Coupon;
-import com.zensar.services.CouponService;
 
 import com.zensar.entity.Coupon;
 import com.zensar.services.CouponService;
@@ -28,14 +23,12 @@ public class CouponController {
 
 	@PostMapping("/")
 	public Coupon createCoupon(@RequestBody Coupon coupon) {
-		System.out.println("Instance 2");
 		return couponService.createCoupon(coupon);
 	}
 	
 	@GetMapping("/getCoupons")
 	public List<Coupon> getAllCoupons() {
 		System.out.println("coupons");
-		
 		return couponService.getAllCoupons();
 		
 	}
@@ -43,11 +36,11 @@ public class CouponController {
 	// http://localhost:8080/coupons/MAX50 -> GET
 	@GetMapping("/{couponCode}")
 	public Coupon getCoupon(@PathVariable("couponCode") String couponCode) {
-		System.out.println("Hello");
+		System.out.println("Instance 2");
 		return couponService.getCoupon(couponCode);
 	}
 	
-	@DeleteMapping("/{couponCode}")
+	@DeleteMapping("/delete/{couponCode}")
 	public void delete(@PathVariable("couponCode") String couponCode) {
 		couponService.deleteCoupon(couponCode);
 		

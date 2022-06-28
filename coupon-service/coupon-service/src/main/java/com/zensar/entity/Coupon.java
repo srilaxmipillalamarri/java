@@ -5,9 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
-@Entity
+//@Entity
 //@Data
 //@NoArgsConstructor
 public class Coupon {
@@ -17,16 +18,8 @@ public class Coupon {
 	private String couponCode;
 	private Double discount;
 	private String expDate;
-
 	private Coupon() {
 		super();
-	}
-	private Coupon(int couponId, String couponCode, Double discount, String expDate) {
-		super();
-		this.couponId = couponId;
-		this.couponCode = couponCode;
-		this.discount = discount;
-		this.expDate = expDate;
 	}
 	public int getCouponId() {
 		return couponId;
@@ -58,5 +51,4 @@ public class Coupon {
 				+ expDate + "]";
 	}
 	
-	}
-	
+}
