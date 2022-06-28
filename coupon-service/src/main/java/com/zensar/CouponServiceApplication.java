@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class CouponServiceApplication {
-	@Value("${test.mylanguage}")
+	@Value("${test.myLanguage}")
 	private String language;
 
 	@Autowired
