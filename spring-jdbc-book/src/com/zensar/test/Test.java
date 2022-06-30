@@ -16,12 +16,12 @@ public class Test {
 
 		// ------CREATE NEW Book--------
 
-		Book book = new Book();
+		/*Book book = new Book();
 		book.setBookNo(02);
 		book.setBookName("ocean");
 		book.setBookCost(3200);
 		int result = bookDaoImpl.insertBook(book);
-		System.out.println("Book added " + result);
+		System.out.println("Book added " + result);*/
 
 		// -----------UPDATE THE Book------
 
