@@ -27,6 +27,7 @@ import com.zensar.ide.service.CouponService;
  * MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes
  * = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
  */
+@RequestMapping("coupon-api")
 public class CouponController {
 	@Autowired
 	private CouponService couponService;
