@@ -3,36 +3,18 @@ package com.zensar.ide.service;
 import java.util.List;
 
 import org.springframework.data.domain.Sort.Direction;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.zensar.ide.dto.ProductDto;
-import com.zensar.ide.entity.Product;
 
 public interface ProductService {
 	public ProductDto getProduct(int productId);
-
-	// public List<ProductDto> getAllProducts();
-	// public List<ProductDto> getAllProducts(int pageNumber,int pageSize)
-	public List<ProductDto> getAllProducts(int pageNumber, int pageSize, String sortBy, Direction dir);
-
-	// public void insertProduct(Product product);
-	public ProductDto insertProduct(ProductDto productDto);
-
-	// public void updateProduct(int productId, Product product);
-	public void updateProduct(int productId, ProductDto productDto);
-
-	public void deleteProduct(int productId);
-	
+	public List<ProductDto> getProducts(int pageNumber,int pageSize,String sortBy,Direction dir);
+	public ProductDto insert(ProductDto productDto);
+	public void update(int productId,ProductDto productDto);
+	public void delete(int productId);
 	public List<ProductDto> getByProductName(String productName);
-	
-	public List<ProductDto> getByProductNameAndExpDate(String productName,String expDate);
-	
-	public List<ProductDto> getByProductNameOrProductCost(String productName,int productCost);
-	
-	public List<ProductDto> getByProductNameOrderByProductCost(String productName);
-
-	
-
+	public List<ProductDto> getByProductNameAndProductPrice(String productName,int productPrice);
+	public List<ProductDto> getByProductNameOrProductPrice(String productName,int productPrice);
+	public List<ProductDto> getByProductNameOrderByProductQuantity(String productName);
 }
+

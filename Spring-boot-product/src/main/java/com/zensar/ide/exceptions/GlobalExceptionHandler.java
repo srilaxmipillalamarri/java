@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.zensar.ide.entity.ErrorResponse;
 
-
-
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(value = NoSuchProductExistsException.class )
