@@ -9,9 +9,9 @@ https:localhost:1111/coupon-api/coupons
 <CouponDto>
      <couponId>1</couponId>
      <couponCode>OFF30</couponCode>
-     <expDate>july16th2022</expDate>
-     <couponPrice>65</couponPrice>
-     <couponDesc>30%OFF ON 65rs coupon</couponDesc>
+     <expDate>july28th2022</expDate>
+     <couponPrice>70</couponPrice>
+     <couponDesc>30%OFF ON 70rs coupon</couponDesc>
 </CouponDto>
 
 GET :
