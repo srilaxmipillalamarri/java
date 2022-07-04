@@ -7,7 +7,6 @@ INDEX VERSION 1.131+C:\Users\sp67975\Documents\workspace-sts-3.9.8.RELEASE2\.met
 1343946326.index
 2137682651.index
 2203962647.index
-707729102.index
 1255476840.index
 1928893304.index
 215333743.index
@@ -125,7 +124,6 @@ INDEX VERSION 1.131+C:\Users\sp67975\Documents\workspace-sts-3.9.8.RELEASE2\.met
 4093495645.index
 938035196.index
 3430873771.index
-1061866012.index
 1575679717.index
 1132788834.index
 2991580454.index
@@ -176,7 +174,6 @@ INDEX VERSION 1.131+C:\Users\sp67975\Documents\workspace-sts-3.9.8.RELEASE2\.met
 1814511343.index
 1265979629.index
 3964357579.index
-3121592682.index
 1208875955.index
 1278022957.index
 2482388717.index
@@ -186,7 +183,6 @@ INDEX VERSION 1.131+C:\Users\sp67975\Documents\workspace-sts-3.9.8.RELEASE2\.met
 2107759633.index
 162203092.index
 1960121022.index
-1270161672.index
 2472744901.index
 420721033.index
 2317501585.index

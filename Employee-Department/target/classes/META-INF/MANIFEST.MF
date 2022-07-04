@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: SP67975
 Build-Jdk: 1.8.0_91
 Created-By: Maven Integration for Eclipse
 
+=======
+Manifest-Version: 1.0
+Built-By: SP67975
+Build-Jdk: 1.8.0_91
+Created-By: Maven Integration for Eclipse
+
+>>>>>>> branch 'main' of https://github.com/srilaxmipillalamarri/java.git
