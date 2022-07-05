@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 spring:
   datasource:
     password: root123
@@ -26,5 +26,5 @@ spring:
       hibernate:
        format-sql: true
       # dialect: org.hibernate.dialect.MySQLDialect
->>>>>>> branch 'main' of https://github.com/srilaxmipillalamarri/java.git
+
       
